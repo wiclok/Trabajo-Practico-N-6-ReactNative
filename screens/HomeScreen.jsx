@@ -1,6 +1,6 @@
-import React from 'react';
-import { View, Text, Button } from 'react-native';
-import { StyleSheet } from 'react-native-web';
+import React from "react";
+import { View, Text, Button } from "react-native";
+import { StyleSheet } from "react-native-web";
 
 export const HomeScreen = ({ navigation }) => {
   return (
@@ -9,13 +9,19 @@ export const HomeScreen = ({ navigation }) => {
       <View style={style.button}>
         <Button
           title="Go to Details"
-          onPress={() => navigation.navigate('Details')}
+          onPress={() => navigation.navigate("Details")}
         />
       </View>
       <Button
         title="Go to Profile"
-        onPress={() => navigation.navigate('Profile')}
+        onPress={() => navigation.navigate("Profile")}
       />
+      <View style={style.button}>
+        <Button
+          title="Go to Users"
+          onPress={() => navigation.navigate("Users")}
+        />
+      </View>
     </View>
   );
 };
@@ -23,10 +29,10 @@ export const HomeScreen = ({ navigation }) => {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center",
   },
   button: {
-    margin: 10
-  }
-})
+    margin: 10,
+  },
+});
